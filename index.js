@@ -92,3 +92,16 @@ app.post("/sinhvien/sua", urlencodedParser ,function(req, res){
     }
   })
 })
+
+app.get("/sinhvien/xoa/:id", function(req, res){
+  var id = req.params.id;
+  connection.query("DELETE FROM sinhvien where id ="+id, function(error, rows){
+    if(!!error){
+      console.log('Error in the Query');
+    }
+    else {
+      console.log('SUCCESS!');
+      res.redirect("../../sinhvien/list");
+    }
+  })
+})
