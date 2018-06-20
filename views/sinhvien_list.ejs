@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Danh sách sinh viên</title>
+</head>
+<body>
+<table width="500" border="1">
+  <tr>
+    <td>ID</td>
+    <td>Họ tên</td>
+    <td>Email</td>
+    <td><a href="../sinhvien/them">Thêm</a></td>
+  </tr>
+  <% data.forEach(function(sv){%>
+    <tr>
+      <td><%= sv.ID %></td>
+      <td><%= sv.HOTEN %></td>
+      <td><%= sv.EMAIL %></td>
+      <td><a href="../sinhvien/sua/<%= sv.ID %>">Sửa</a> | <a onclick="return confirm('Bạn có chắc muốn xóa?')" href="../sinhvien/xoa/<%= sv.ID %>">Xóa</a></td>
+    </tr>
+  <%})%>
+</table>
+</body>
+</html>

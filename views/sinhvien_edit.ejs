@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Thêm sinh viên</title>
+</head>
+<body>
+  <form action="../../sinhvien/sua" method="POST" enctype="application/x-www-form-urlencoded">
+    <input type="text" name="txtHoTen" value="<%= data.HOTEN%>">
+    <input type="text" name="txtEmail" value="<%= data.EMAIL%>">
+    <input type="hidden" name="txtID" value="<%= data.ID%>">
+    <input type="submit" name="btnThem" value="Cập nhật">
+  </form>
+</body>
+</html>
