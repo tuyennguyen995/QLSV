@@ -4,7 +4,7 @@ var app = express();
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.set("views", "./views");
-app.listen(3000);
+app.listen(prosess.env.PORT ||3000);
 
 var mysql = require('mysql') //Ket noi module
 var connection = mysql.createConnection({  //Bien connect
